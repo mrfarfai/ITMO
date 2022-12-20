@@ -1,0 +1,22 @@
+mkdir lab0
+cd lab0/
+mkdir panpour3 panpour3/serperior
+touch panpour3/nidorino panpour3/nincada panpour3/marowak
+mkdir phanpy7 phanpy7/yanmega phanpy7/ludicolo phanpy7/staravia
+touch phanpy7/trapinch phanpy7/rhydon phanpy7/metagross
+touch ./rhyhorn3 ./skiploom4 ./steelix5
+mkdir timburr3 timburr3/zubat timburr3/foongus
+touch timburr3/kricketune timburr3/cherubi timburr3/ninjask timburr3/lucario
+ls -lR | echo -e "Ходы Body Slam Couter Defense Curl Double-Edge Drill Run\nHelping Hand Iron Tail Mud-Slap Shock Wave Sleep Talk Snore Sucker\nPunch Super Fang Water Pulse" > */nidorino
+ls -lR | echo -e "weigth=12.1 height=20.0 atk=5\ndef=9" > */nincada
+ls -lR | echo -e "Тип покемона GROUND NONE" > */marowak
+ls -lR | echo -e "Способности Bite\nSand-Attac" > */trapinch
+ls -lR | echo -e "Способности Stomp\nSand-Attac" > */rhydon
+ls -lR | echo -e "Живет Cave\nMountain" > */metagross
+echo -e "Тип диеты Herbivore" > rhyhorn3
+echo -e "satk=5 sdef=7\nspd=5" > skiploom4
+echo -e "Способности Stomp\nSand-Attac" > skiploom4
+ls -lR | echo -e "Развитые спасобности Technician\nSoundproof" > */kricketune
+ls -lR | echo -e "weigth=7.3 height=16.0 atk=4\ndef=5" > */cherubi
+ls -lR | echo -e "Развитые способности Infiltrator" > */ninjask
+ls -lR | echo -e "Возможности\nOverland=8 Surface=6 Jump4 Intelligence=4 Aura = 0" > */lucario

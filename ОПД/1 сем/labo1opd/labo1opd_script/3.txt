@@ -1,0 +1,19 @@
+chmod u+r rhyhorn3
+cp rhyhorn3 timburr3/ninjaskrhyhorn
+chmod u-r rhyhorn3
+ln -s ~/info/lab0/rhyhorn3 ~/info/lab0/panpour3/nidorinorhyhorn
+ln skiploom4 timburr3/cherubiskiploom
+chmod u+r phanpy7/staravia
+chmod u+r phanpy7/metagross
+chmod u+r phanpy7/yanmega
+cp -R phanpy7 timburr3/zubat
+chmod u-r phanpy7/staravia
+chmod u-r phanpy7/metagross
+chmod u-r phanpy7/yanmega
+chmod u+r panpour3/nincada
+cat panpour3/nincada phanpy7/rhydon > skiploom4_32
+chmod u-r panpour3/nincada
+ln -s phanpy7 Copy_46
+chmod u+w timburr3/foongus
+cp steelix5 timburr3/foongus
+chmod u-w timburr3/foongus

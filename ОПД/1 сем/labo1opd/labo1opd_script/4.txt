@@ -1,0 +1,6 @@
+wc -l **/m* ./m* 2>&1 > /tmp/373453
+ls -Rl | sort -k 2 | grep -v total | tail -3
+cat -n **/l* ./l* 2>&1 | sort
+ls -RSr **/*o ./*o | head -2
+wc -l panpour3/* > /tmp/373453
+ls -ltr **/l* ./l* 2>/dev/null | grep . | grep -v total | head -2

@@ -1,0 +1,8 @@
+rm steelix5
+rm -f ./panpour3/marowak
+rm ./panpour3/nidorinorhyho*
+chmod u+r timburr3/
+rm ./timburr3/cherubiskiplo*
+chmod u-r timburr3/
+chmod -R 777 phanpy7/ | rm -R phanpy7/
+rmdir ./panpour3/serperior
