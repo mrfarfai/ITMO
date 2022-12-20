@@ -1,0 +1,17 @@
+timetable: 
+	lesson: 
+		time: "\n\n\t\t\t11:40-13:10\n\t\t"
+		audience: "\n\t\t\t2308 (БЫВШ. 306) АУД."
+		address: "Кронвер/кский пр., д.49, лит.А\n\t\t"
+		subject: "\n\t\t\tИНФОРМАТИКА\n\t\t"
+		subject_type: ЛАБ
+		teacher: Белозубов \Александр\ Владимирович
+		lesson_type: Очно - дистанционный
+	lesson: 
+		time: 13:30-15:00
+		audience: 2308 (БЫВШ. 306) АУД.
+		address: Кронверкский пр., д.49, лит.А
+		subject: ИНФОРМАТИКА
+		subject_type: ЛАБ
+		teacher: Белозубов Александр Владимирович
+		lesson_type: Очно - дистанционный

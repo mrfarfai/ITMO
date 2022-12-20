@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String in = input.next();
+        int l = in.length();
+        int n = Integer.parseInt(in);
+        int s = 0, fact = 1;
+        for(int i = 1; i <= l; ++i) {
+            int a = n % 10;
+            n /= 10;
+            fact *= i;
+            s += a * fact;
+        }
+        System.out.println(s);
+
+    }
+}

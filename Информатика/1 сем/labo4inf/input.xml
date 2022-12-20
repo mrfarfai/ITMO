@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<timetable>
+	<lesson>
+		<time>
+
+			11:40-13:10
+		</time>
+		<audience>
+			2308 (БЫВШ. 306) АУД.</audience>
+		<address>Кронвер/кский пр., д.49, лит.А
+		</address>
+		<subject>
+			ИНФОРМАТИКА
+		</subject>
+		<subject_type>ЛАБ</subject_type>
+		<teacher>Белозубов \Александр\ Владимирович</teacher>
+		<lesson_type>Очно - дистанционный</lesson_type>
+	</lesson>
+	<lesson>
+		<time>13:30-15:00</time>
+		<audience>2308 (БЫВШ. 306) АУД.</audience>
+		<address>Кронверкский пр., д.49, лит.А</address>
+		<subject>ИНФОРМАТИКА</subject>
+		<subject_type>ЛАБ</subject_type>
+		<teacher>Белозубов Александр Владимирович</teacher>
+		<lesson_type>Очно - дистанционный</lesson_type>
+	</lesson>
+</timetable>
