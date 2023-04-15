@@ -1,0 +1,10 @@
+filter_starts_with_name qwe
+add
+234
+3;3
+34
+
+
+
+
+execute_script test1.txt
