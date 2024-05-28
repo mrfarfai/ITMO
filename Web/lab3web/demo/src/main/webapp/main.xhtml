@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<h:head>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <h:outputStylesheet library="css" name="style.css" />
+    <title>lab3web - main</title>
+</h:head>
+
+<h:body>
+    <ui:include src="header.xhtml"/>
+
+    <div id = "graff">
+        <div id="calculator" style="width: 500px; height: 500px;"></div>
+
+    </div>
+
+    <div id="graph-container" class="blured-container round-container margin">
+        <div id="graph">
+        </div>
+    </div>
+
+    <h:form>
+        <!-- Кнопки для X -->
+        <div>
+            X:
+            <h:commandButton id="x-btn-3" value="-3" action="#{formDataBean.updateX(-3)}" class="x-btn">
+                <f:ajax execute="@this" render="@form" />
+            </h:commandButton>
+            <h:commandButton id="x-btn-2" value="-2" action="#{formDataBean.updateX(-2)}" class="x-btn">
+                <f:ajax execute="@this" render="@form" />
+            </h:commandButton>
+            <h:commandButton id="x-btn-1" value="-1" action="#{formDataBean.updateX(-1)}" class="x-btn">
+                <f:ajax execute="@this" render="@form" />
+            </h:commandButton>
+            <c:forEach var="i" begin="-3" end="5">
+                <h:commandButton id="x-btn" value="#{i}" action="#{formDataBean.updateX(i)}" class="x-btn">
+                    <f:ajax execute="@this" render="@form" />
+                </h:commandButton>
+            </c:forEach>
+            выбран: #{formDataBean.x}
+            <h:message for="x-btn" style="color:red"/>
+        </div>
+
+        <!-- Поле Y -->
+        <div>
+            Y:
+            <h:inputText id="y-input" value="#{formDataBean.y}" validator="#{formDataBean.validateSelectY}" validatorMessage="Значение должно быть в диапазоне от -3 до 5" >
+                <f:validateDoubleRange minimum="-3" maximum="5" />
+                <f:ajax event="change" execute="@this" render="@form" />
+            </h:inputText>
+            <h:message for="y-input" style="color:red"/>
+        </div>
+
+
+
+        <!-- Поле R -->
+        <div>
+            R:
+            <p:spinner id="r-spinner" value="#{formDataBean.r}" min="1" max="3" stepFactor="0.5" validatorMessage="Значение должно быть в диапазоне от 1 до 3">
+                <f:validateLongRange minimum="1" maximum="3" />
+                <f:validator validatorId="rValidator" />
+                <p:ajax event="change" update="@form" />
+            </p:spinner>
+            <h:message for="r-spinner" style="color:red"/>
+        </div>
+
+
+        <div id="submit-container" class="margin">
+            <h:commandButton id="submit-button" value="check" action="#{formDataBean.submitAction}" class="check_btn">
+                <f:ajax execute="@form" render="@form" />
+            </h:commandButton>
+            <h:message for="submit-button" style="color:red"/>
+        </div>
+        <!-- Сообщение об ошибке -->
+        <h:outputText value="#{formDataBean.errorMessage}" style="color:red"/>
+
+    </h:form>
+
+    <h:dataTable value="#{dataBean.records}" var="record" border="1">
+        <h:column>
+            <f:facet name="header">X</f:facet>
+            #{record.x}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Y</f:facet>
+            #{record.y}
+        </h:column>
+        <h:column>
+            <f:facet name="header">R</f:facet>
+            #{record.r}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Result</f:facet>
+            #{record.result}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Date Time</f:facet>
+            #{record.dt}
+        </h:column>
+
+    </h:dataTable>
+
+    <script type="text/javascript" src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+
+    <script type="text/javascript" src="resources/js/graph.js"></script>
+    <script type="text/javascript" src="resources/js/js.js"></script>
+    <h:outputScript>
+        <ui:repeat var="record" value="#{dataBean.last}">
+            drawFig("#{record.r}");
+        </ui:repeat>
+    </h:outputScript>
+
+    <h:outputScript>
+        <ui:repeat var="record" value="#{dataBean.last}">
+            drawPointXYRRes('#{record.x}', '#{record.y}', '#{record.r}', '#{record.result ? 'true' : ''}');
+        </ui:repeat>
+    </h:outputScript>
+
+</h:body>
+</html>

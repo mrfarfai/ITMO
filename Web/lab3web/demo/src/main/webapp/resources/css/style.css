@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ddd;
+}
+
+nav {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    border-bottom: 2px solid #a5a5a5;
+}
+
+nav > graphicImage {
+    width: 150px;
+}
+
+nav > p {
+    font-size: 25px;
+    font-weight: 600;
+    color: #0000bd;
+}
+
+nav p:last-child {
+    font-size: 20px;
+    color: #a50000;
+}
+
+content {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    width: 50%;
+}
+
+main > form {
+    margin: 10px 0;
+    display: block;
+}
+
+main > form > div {
+    margin: 15px 0;
+    display: block;
+}
+
+.form-label {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.x-btn {
+    background: #00c500;
+    border: 2px solid #007900;
+    border-radius: 10px;
+    padding: 5px 15px;
+    color: #fff;
+}
+
+.x-btn:hover, form > .check {
+    cursor: pointer;
+}
+
+.x-btn.active {
+    background: #007900;
+}
+
+form>div {
+    margin: 5px 10px;
+}
+
+form input[type=text] {
+    border: 1px solid #286fef;
+    border-radius: 5px;
+    padding: 5px;
+}
+form > .check {
+    background: #f17c03;
+    border: 2px solid #6c3700;
+    border-radius: 10px;
+    padding: 5px 15px;
+    color: #fff;
+}
+
+.form-r-div {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.checkbox-div {
+    margin: 0 5px;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #000;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background: #bbbbf3;
+}
+tr > td:first-child {
+    background: #bbbbf3;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+section > button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 5px;
+}
+
+svg{
+    cursor: pointer;
+}
+
+.time-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.time-div form label {
+    font-size: 100px;
+    font-weight: 600;
+}
